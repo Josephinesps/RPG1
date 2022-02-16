@@ -24,6 +24,9 @@ function checkAnswers(answer) {
     case "Skip":
       skipIgnore();
       break;
+    case "Lets eat Breakfast":
+      eatIgnore();
+      break;
     }
 }
 
@@ -59,6 +62,12 @@ function ignoreDressed(){
 
 function skipIgnore(){
   story("You skip breakfast and head towards your school bag, before putting it on you realize that you're a little lightheaded and freezing. Your vision goes blurry. YOU PASS OUT!<br>Ya know breakfast is the most important meal of the day, also next time you should get dressed");
+  choices = ["Start over"];
+  answer = setOptions(choices);
+}
+
+function eatIgnore(){
+  story("You go for a quick bowl of cereal after ignoring the breeze. As you are eating, you wonder if you've done your homework, but when you stand up you can barely move. You're too cold.<br>You pass out from almost freezing to death. Wow<br>What a move, maybe the breeze should’ve given you the clue.");
   choices = ["Start over"];
   answer = setOptions(choices);
 }
