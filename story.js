@@ -21,6 +21,9 @@ function checkAnswers(answer) {
     case "Ignore":
       ignoreDressed();
       break;
+    case "Skip":
+      skipIgnore();
+      break;
     }
 }
 
@@ -51,6 +54,12 @@ function getDressed(){
 function ignoreDressed(){
   story("You get out of bed and get out of your pajamas…that's all.<br>You head towards the kitchen but stop when you feel a cool breeze. Hm could you be missing something?");
   choices = ["Lets eat Breakfast","Skip"];
+  answer = setOptions(choices);
+}
+
+function skipIgnore(){
+  story("You skip breakfast and head towards your school bag, before putting it on you realize that you're a little lightheaded and freezing. Your vision goes blurry. YOU PASS OUT!<br>Ya know breakfast is the most important meal of the day, also next time you should get dressed");
+  choices = ["Start over"];
   answer = setOptions(choices);
 }
 
