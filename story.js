@@ -18,6 +18,9 @@ function checkAnswers(answer) {
     case "Get dressed":
       getDressed();
       break;
+    case "Ignore":
+      ignoreDressed();
+      break;
     }
 }
 
@@ -42,6 +45,12 @@ function offAlarm(){
 function getDressed(){
   story("You get out of bed and get out of your pajamas and put on your outfit for today. You look at yourself in the mirror, you look fabulous!<br>You head towards the kitchen but stop when you see the time. Hm, is it too late for breakfast?");
   choices = ["Eat Breakfast","Skip it"];
+  answer = setOptions(choices);
+}
+
+function ignoreDressed(){
+  story("You get out of bed and get out of your pajamas…that's all.<br>You head towards the kitchen but stop when you feel a cool breeze. Hm could you be missing something?");
+  choices = ["Lets eat Breakfast","Skip"];
   answer = setOptions(choices);
 }
 
