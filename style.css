@@ -1,3 +1,6 @@
+body {
+  background: black url("bedroomPhoto.png") no-repeat fixed center;
+}
 html {
   background-color: rgb(0, 0, 0);
 }
