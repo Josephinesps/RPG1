@@ -27,6 +27,9 @@ function checkAnswers(answer) {
     case "Lets eat Breakfast":
       eatIgnore();
       break;
+    case "Skip it":
+      dressedSkip();
+      break;
     }
 }
 
@@ -68,6 +71,12 @@ function skipIgnore(){
 
 function eatIgnore(){
   story("You go for a quick bowl of cereal after ignoring the breeze. As you are eating, you wonder if you've done your homework, but when you stand up you can barely move. You're too cold.<br>You pass out from almost freezing to death. Wow<br>What a move, maybe the breeze should’ve given you the clue.");
+  choices = ["Start over"];
+  answer = setOptions(choices);
+}
+
+function dressedSkip(){
+  story("You believe you have no time for breakfast, so you head out early. The wind is blowing as you walk towards the bus stop. When you arrive there you stand and wait…<br>And wait…<br>And wait…<br>And wait… <br>You’ve been waiting for almost an hour now, Your stomach is screaming at you for food. It's painful. You go back home and miss school for the day, hm maybe you did have time to eat breakfast.");
   choices = ["Start over"];
   answer = setOptions(choices);
 }
