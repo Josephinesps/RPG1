@@ -30,6 +30,9 @@ function checkAnswers(answer) {
     case "Skip it":
       dressedSkip();
       break;
+    case "Eat Breakfast":
+      dressedEat();
+      break;
     }
 }
 
@@ -80,6 +83,13 @@ function dressedSkip(){
   choices = ["Start over"];
   answer = setOptions(choices);
 }
+
+function dressedEat(){
+  story("You have plenty of time for breakfast! So you prepare yourself some home-made scramble eggs, buttered toast and a nice class of your choice of juice. Your morning is going great!!<br>You finish your meal, but before heading out, you wonder if you ever did your homework…");
+  choices = ["You didn't","You did"];
+  answer = setOptions(choices);
+}
+
 
 /*Old text here*/
 
