@@ -36,6 +36,9 @@ function checkAnswers(answer) {
     case "You didn't":
       noHomework();
       break;
+    case "You did":
+      yesHomework();
+      break;
     }
 }
 
@@ -98,6 +101,13 @@ function noHomework(){
   choices = ["Start over"];
   answer = setOptions(choices);
 }
+
+function yesHomework(){
+  story("You did..great! You head to school and you’re all ready for your test, that homework study guide did come in handy last night.<br>You take the test, it was a stressful three hours of testing, though hours pass as you wait for your results, i hope it's no surprise that you. <br>Passed! I mean what did you expect?");
+  choices = ["You won!"];
+  answer = setOptions(choices);
+}
+
 
 /*Old text here*/
 
