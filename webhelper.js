@@ -7,6 +7,7 @@ var dropdown = document.getElementById("choices");
 var messages = [];
 var choices;
 var answer;
+var hasImage = false;
 
 function start() {
   setup();
@@ -48,4 +49,16 @@ function delayText(text, delay) {
   var timer = setInterval(function () {
     callback(text);
   }, delay);
+}
+
+function addImage(imageURL){
+  let image = document.createElement("img");
+  image.src = imageURL;
+  image.setAttribute("width", "400px");
+  var storyBox = document.getElementById("storybox");
+  if (hasImage == true) {
+      storyBox.innerHTML="";
+  }
+  storyBox.appendChild(image);
+  hasImage = true;
 }

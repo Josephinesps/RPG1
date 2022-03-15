@@ -58,6 +58,7 @@ function missSchool(){
 }
 
 function offAlarm(){
+  addImage("bedroomPhoto.png");
   story("You forced yourself up as if it was a chore. You turn off your annoying alarm, flick on your lamp, and rub your eyes before seeing clear. But now what?");
   choices = ["Get dressed","Ignore"];
   answer = setOptions(choices);
