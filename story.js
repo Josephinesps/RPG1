@@ -83,6 +83,7 @@ function skipIgnore(){
 }
 
 function eatIgnore(){
+  addImage("greenkitchen.png");
   story("You go for a quick bowl of cereal after ignoring the breeze. As you are eating, you wonder if you've done your homework, but when you stand up you can barely move. You're too cold.<br>You pass out from almost freezing to death. Wow<br>What a move, maybe the breeze should’ve given you the clue.");
   choices = ["Start over"];
   answer = setOptions(choices);
