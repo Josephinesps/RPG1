@@ -83,7 +83,7 @@ function skipIgnore(){
 }
 
 function eatIgnore(){
-  addImage("greenkitchen.png");
+  addImage("greenKitchen.png");
   story("You go for a quick bowl of cereal after ignoring the breeze. As you are eating, you wonder if you've done your homework, but when you stand up you can barely move. You're too cold.<br>You pass out from almost freezing to death. Wow<br>What a move, maybe the breeze should’ve given you the clue.");
   choices = ["Start over"];
   answer = setOptions(choices);
@@ -96,13 +96,19 @@ function dressedSkip(){
 }
 
 function dressedEat(){
+  addImage("greenKitchen.png");
   story("You have plenty of time for breakfast! So you prepare yourself some home-made scramble eggs, buttered toast and a nice glass of your choice of juice. Your morning is going great!!<br>You finish your meal, but before heading out, you wonder if you ever did your homework…");
   choices = ["You didn't","You did"];
   answer = setOptions(choices);
 }
 
 function noHomework(){
-  story("You didn’t.. Oh well. You head to school anyways. As you get there you remember that your homework was supposed to be the study guide for your coming up test!<br>You still have to take the test ya know, and you do! Hours pass as you wait for your results, I hope it's no surprise that you.<br>Failed. I mean what did you expect?");
+  var messages = [ 'You didn’t.. Oh well. You head to school anyways.', 
+  'As you get there you remember that your homework was supposed to be the study guide for your coming up test!',
+  "You still have to take the test ya know, and you do! Hours pass as you wait for your results, I hope it's no surprise that you.",
+  'Failed. I mean what did you expect?'
+  ];
+  delayText(messages, 1000);
   choices = ["Start over"];
   answer = setOptions(choices);
 }
