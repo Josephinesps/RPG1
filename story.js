@@ -90,6 +90,7 @@ function eatIgnore(){
 }
 
 function dressedSkip(){
+  addImage("busStop.png");
   story("You believe you have no time for breakfast, so you head out early. The wind is blowing as you walk towards the bus stop. When you arrive there you stand and wait…<br>And wait…<br>And wait…<br>And wait… <br>You’ve been waiting for almost an hour now, Your stomach is screaming at you for food. It's painful. You go back home and miss school for the day, hm maybe you did have time to eat breakfast.");
   choices = ["Start over"];
   answer = setOptions(choices);
@@ -103,8 +104,9 @@ function dressedEat(){
 }
 
 function noHomework(){
+  addImage("homeWork.png");
   var messages = [ 'You didn’t.. Oh well. You head to school anyways.', 
-  'As you get there you remember that your homework was supposed to be the study guide for your coming up test!',
+  'As you get there you remember that your homework was supposed to be the study guide for your up coming test!',
   "You still have to take the test ya know, and you do! Hours pass as you wait for your results, I hope it's no surprise that you.",
   'Failed. I mean what did you expect?'
   ];
@@ -114,6 +116,7 @@ function noHomework(){
 }
 
 function yesHomework(){
+  addImage("homeWork.png");
   story("You did..great! You head to school and you’re all ready for your test, that homework study guide did come in handy last night.<br>You take the test, it was a stressful three hours of testing, though hours pass as you wait for your results, i hope it's no surprise that you. <br>Passed! I mean what did you expect?");
   choices = ["You won!"];
   answer = setOptions(choices);
