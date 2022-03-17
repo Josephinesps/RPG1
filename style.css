@@ -56,6 +56,11 @@ button {
   color:white;
 }
 
+select#choices:hover {
+  background-color: skyblue;
+  color: white;
+}
+
 #storybox {
   text-align: center;
 }
