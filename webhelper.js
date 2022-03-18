@@ -2,7 +2,7 @@ window.onload = start;
 
 var options=[];
 var buttonElement = document.getElementById("button1");
-var currentStoryElement = document.getElementById("currentStory");
+var currentStory = document.getElementById("currrentStory");
 var dropdown = document.getElementById("choices");
 var messages = [];
 var choices;
@@ -33,14 +33,14 @@ function setOptions(options) {
 }
 
 function story(text) {
-  currentStoryElement.innerHTML = text;
+  currentStory.innerHTML = text;
 }
 
 function delayText(text, delay) {
   var index = 0;
   story("");
   var callback = function (text) {
-    story(currentStoryElement.innerHTML  + text[index]+ "<br />"+ "<br />");
+    story(currentStory.innerHTML  + text[index]+ "<br />"+ "<br />");
     index += 1;
     if (index >text.length-1){
       clearInterval(timer);
@@ -55,10 +55,10 @@ function addImage(imageURL){
   let image = document.createElement("img");
   image.src = imageURL;
   image.setAttribute("width", "400px");
-  var storyBox = document.getElementById("storybox");
+  var imagebox = document.getElementById("imageBox");
   if (hasImage == true) {
-      storyBox.innerHTML="";
+      imagebox.innerHTML="";
   }
-  storyBox.appendChild(image);
+  imagebox.appendChild(image);
   hasImage = true;
 }
