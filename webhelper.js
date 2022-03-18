@@ -1,8 +1,9 @@
 window.onload = start;
-
 var options=[];
 var buttonElement = document.getElementById("button1");
-var currentStoryElement = document.getElementById("currentStory");
+var currentstory = document.getElementById("currentStory");
+var storytext = document.getElementById("storyText");
+storyText.innerHTML="<h1>Testing</h1>";
 var dropdown = document.getElementById("choices");
 var messages = [];
 var choices;
@@ -33,14 +34,14 @@ function setOptions(options) {
 }
 
 function story(text) {
-  currentStoryElement.innerHTML = text;
+  storytext.innerHTML = text;
 }
 
 function delayText(text, delay) {
   var index = 0;
   story("");
   var callback = function (text) {
-    story(currentStoryElement.innerHTML  + text[index]+ "<br />"+ "<br />");
+    story(storytext.innerHTML  + text[index]+ "<br />"+ "<br />");
     index += 1;
     if (index >text.length-1){
       clearInterval(timer);
