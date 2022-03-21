@@ -53,7 +53,11 @@ function sceneTest(){
 }
 
 function missSchool(){
-  story("You snooze your alarm and let it ring before it gives up. You fall back asleep, Hm it seems though you should’ve been awake.<br>You slept in and missed school.");
+  addImage("sleepDream.png");
+  var messages = [ 'You snooze your alarm and let it ring before it gives up. You fall back asleep, Hm it seems though you should’ve been awake.',
+  'You slept in and missed school.'
+  ];
+  delayText(messages, 1000);
   choices = ["Start over"];
   answer = setOptions(choices);
 }
@@ -78,14 +82,23 @@ function ignoreDressed(){
 }
 
 function skipIgnore(){
-  story("You skip breakfast and head towards your school bag, before putting it on you realize that you're a little lightheaded and freezing. Your vision goes blurry. YOU PASS OUT!<br>Ya know breakfast is the most important meal of the day, also next time you should get dressed");
+  addImage("dizzyMan.png");
+  var messages = [ 'You skip breakfast and head towards your school bag, before putting it on you realize that youre a little lightheaded and freezing.', 
+  'Your vision goes blurry. YOU PASS OUT!',
+  'Ya know breakfast is the most important meal of the day, also next time you should get dressed'
+ ];
+  delayText(messages, 1000);
   choices = ["Start over"];
   answer = setOptions(choices);
 }
 
 function eatIgnore(){
   addImage("greenKitchen.png");
-  story("You go for a quick bowl of cereal after ignoring the breeze. As you are eating, you wonder if you've done your homework, but when you stand up you can barely move. You're too cold.<br>You pass out from almost freezing to death. Wow<br>What a move, maybe the breeze should’ve given you the clue.");
+  var messages = [ 'You go for a quick bowl of cereal after ignoring the breeze. As you are eating, you wonder if youve done your homework, but when you stand up you can barely move.',
+  'Youre too cold.',
+  'You pass out from almost freezing to death. Wow<br>What a move, maybe the breeze should’ve given you the clue.'
+  ];
+  delayText(messages, 1000);
   choices = ["Start over"];
   answer = setOptions(choices);
 }
@@ -118,13 +131,23 @@ function noHomework(){
 
 function yesHomework(){
   addImage("homeWork.png");
-  story("You did..great! You head to school and you’re all ready for your test, that homework study guide did come in handy last night.<br>You take the test, it was a stressful three hours of testing, though hours pass as you wait for your results, i hope it's no surprise that you. <br>Passed! I mean what did you expect?");
+  var messages = [ 'You did..great! You head to school and you’re all ready for your test, that homework study guide did come in handy last night.',
+  'You take the test, it was a stressful three hours of testing, though hours pass as you wait for your results.',
+  'I hope its no surprise that you.', 
+  'Passed! I mean what did you expect?'
+  ];
+  delayText(messages, 1000);
   choices = ["You won!"];
   answer = setOptions(choices);
 }
 
 function youWon(){
-  story("You won, you got all the right combinations that resulted in the end :)..<br>Are you missing some ending? If so, play again!");
+  addImage("confetti.png");
+  var messages = [ 'You won, you got all the right combinations that resulted in the end :)',
+  'Are you missing some ending?', 
+  'If so, play again!'
+  ];
+  delayText(messages, 1000);
   choices = ["Start over"];
   answer = setOptions(choices);
 }
