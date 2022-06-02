@@ -6,17 +6,17 @@ var scene1=sceneTest;
 
 function checkAnswers(answer) {
   switch(answer) {
-    case "Sleep in":
-      missSchool();
+    case "Use the bathroom":
+      bathroom();
       break;
     case "Start over":
       sceneTest();
       break;
-    case "Cancel alarm":
+    case "Explore the house":
       offAlarm();
       break;
-    case "Get dressed":
-      getDressed();
+    case "Open Door":
+      findShrek();
       break;
     case "Ignore":
       ignoreDressed();
@@ -47,20 +47,20 @@ function checkAnswers(answer) {
 
 function sceneTest(){
   addImage("StartingScreen.png");
-  story("You're in your bed, struggling to wake up. You've been dreaming of fighting off monsters as if you are a pirate. Although it was cut short when a ringing noise came bearing in!<br>You sat up, still asleep as you scramble to find that horrendous sound... it was your alarm clock.<br>It was a lousy Monday morning, what should you do?");
-  choices = ["Sleep in","Cancel alarm"];
+  story("You wake up, in a place that looks oddly familiar. Your head is pounding as if you hit your head. You see ahead of you what looks like a home with surpisingly a bathroom behind it.<br>What do you do?");
+  choices = ["Use the bathroom","Explore the House"];
   answer = setOptions(choices);
 }
 
-function missSchool(){
-  addImage("sleepDream.png");
-  var messages = [ 'You snooze your alarm and let it ring before it gives up. You fall back asleep, Hm it seems though you should’ve been awake.',
-  'You slept in and missed school.'
+function findShrek(){
+  addImage("ShrekGettingOutOfShed.png");
+  var messages = ['You open the door in hopes no one was inside yet shrek was there. you slammed the door in embaressment.'
   ];
   delayText(messages, 1000);
   choices = ["Start over"];
   answer = setOptions(choices);
 }
+
 
 function offAlarm(){
   addImage("bedroomPhoto.png");
@@ -69,11 +69,11 @@ function offAlarm(){
   answer = setOptions(choices);
 }
 
-function getDressed(){
-  story("You get out of bed and get out of your pajamas and put on your outfit for today. You look at yourself in the mirror, you look fabulous!<br>You head towards the kitchen but stop when you see the time. Hm, is it too late for breakfast?");
-  choices = ["Eat Breakfast","Skip it"];
+function bathroom(){
+  story("You decide to go to the bathroom before you start your exploration, you are hesitant.<br>What do you want to do.");
+  choices = ["Open Door","Go back"];
   answer = setOptions(choices);
-}
+},m
 
 function ignoreDressed(){
   story("You get out of bed and get out of your pajamas…that's all.<br>You head towards the kitchen but stop when you feel a cool breeze. Hm could you be missing something?");
