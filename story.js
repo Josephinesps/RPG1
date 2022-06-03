@@ -12,17 +12,17 @@ function checkAnswers(answer) {
     case "Start over":
       sceneTest();
       break;
-    case "Explore the house":
-      offAlarm();
+    case "Explore the House":
+      inHouse();
       break;
     case "Open Door":
       findShrek();
       break;
-    case "Ignore":
-      ignoreDressed();
+    case "Talk to him":
+      donkey();
       break;
-    case "Skip":
-      skipIgnore();
+    case "Explore some more":
+      kitchen();
       break;
     case "Lets eat Breakfast":
       eatIgnore();
@@ -62,26 +62,27 @@ function findShrek(){
 }
 
 
-function offAlarm(){
-  addImage("bedroomPhoto.png");
-  story("You forced yourself up as if it was a chore. You turn off your annoying alarm, flick on your lamp, and rub your eyes before seeing clear. But now what?");
-  choices = ["Get dressed","Ignore"];
+function inHouse(){
+  addImage("InsideHouse.png");
+  story("You walk in the house to find donkey sitting on a chair, He looks frightened.<br>Should we talk to him?");
+  choices = ["Talk to him","Explore some more"];
   answer = setOptions(choices);
 }
 
 function bathroom(){
-  story("You decide to go to the bathroom before you start your exploration, you are hesitant.<br>What do you want to do.");
+  addImage("ShrekShed.png");
+  story("You decide to go to the bathroom before you start your exploration, you are hesitant.<br>What do you do?");
   choices = ["Open Door","Go back"];
   answer = setOptions(choices);
-},m
+}
 
-function ignoreDressed(){
+function donkey(){
   story("You get out of bed and get out of your pajamas…that's all.<br>You head towards the kitchen but stop when you feel a cool breeze. Hm could you be missing something?");
   choices = ["Lets eat Breakfast","Skip"];
   answer = setOptions(choices);
 }
 
-function skipIgnore(){
+function kitchen(){
   addImage("dizzyMan.png");
   var messages = [ 'You skip breakfast and head towards your school bag, before putting it on you realize that youre a little lightheaded and freezing.', 
   'Your vision goes blurry. YOU PASS OUT!',
