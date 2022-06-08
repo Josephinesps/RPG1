@@ -24,20 +24,20 @@ function checkAnswers(answer) {
     case "Explore some more":
       kitchen();
       break;
-    case "Lets eat Breakfast":
-      eatIgnore();
+    case "Go back":
+      goBack();
       break;
-    case "Skip it":
-      dressedSkip();
+    case "Go see Shrek":
+      kitchen();
       break;
-    case "Eat Breakfast":
-      dressedEat();
+    case "Eat Shreks food":
+      eatFood();
       break;
-    case "You didn't":
-      noHomework();
+    case "Go investagate":
+      findOut();
       break;
-    case "You did":
-      yesHomework();
+    case "Cry":
+      booHoo();
       break;
     case "You won!":
       youWon();
@@ -47,14 +47,14 @@ function checkAnswers(answer) {
 
 function sceneTest(){
   addImage("StartingScreen.png");
-  story("You wake up, in a place that looks oddly familiar. Your head is pounding as if you hit your head. You see ahead of you what looks like a home with surpisingly a bathroom behind it.<br>What do you do?");
+  story("You wake up, in a place that looks oddly familiar. Your head is pounding, you struggle to stand up and try to understand where you are. You see ahead of you what looks like a house with surpisingly a bathroom behind it.<br>What do you do?");
   choices = ["Use the bathroom","Explore the House"];
   answer = setOptions(choices);
 }
 
 function findShrek(){
   addImage("ShrekGettingOutOfShed.png");
-  var messages = ['You open the door in hopes no one was inside yet shrek was there. you slammed the door in embaressment.'
+  var messages = ['You pray that no one was inside as you slowly open the door and see Shrek TAKING A MASSIVE DUMP. You slammed the door in embaressment.'
   ];
   delayText(messages, 1000);
   choices = ["Start over"];
@@ -64,43 +64,37 @@ function findShrek(){
 
 function inHouse(){
   addImage("InsideHouse.png");
-  story("You walk in the house to find donkey sitting on a chair, He looks frightened.<br>Should we talk to him?");
+  story("You walk in the house to find Donkey sitting on a chair, He looks frightened.<br>Should we talk to him?");
   choices = ["Talk to him","Explore some more"];
   answer = setOptions(choices);
 }
 
 function bathroom(){
   addImage("ShrekShed.png");
-  story("You decide to go to the bathroom before you start your exploration, you are hesitant.<br>What do you do?");
+  story("You decide to go to the bathroom before you start your exploration, you are hesitant. It looks like there is someone in there.<br>Do you still want to use the bathroom?");
   choices = ["Open Door","Go back"];
   answer = setOptions(choices);
 }
 
 function donkey(){
-  story("You get out of bed and get out of your pajamas…that's all.<br>You head towards the kitchen but stop when you feel a cool breeze. Hm could you be missing something?");
-  choices = ["Lets eat Breakfast","Skip"];
+  story("You say hi to Donkey and ask if he is okay.<br>Donkey hesitantly whispered he's coming...<br>What do you mean by he's coming? who's he? ...Donkey? you screamed.<br>Yet Donkey doesn't answer nor does he even bat a eye.<br> You're confused, concered even.<br>The best thing you can do is see if Shrek has any idea what is going on.");
+  choices = ["Go see Shrek"];
   answer = setOptions(choices);
 }
 
 function kitchen(){
-  addImage("dizzyMan.png");
-  var messages = [ 'You skip breakfast and head towards your school bag, before putting it on you realize that youre a little lightheaded and freezing.', 
-  'Your vision goes blurry. YOU PASS OUT!',
-  'Ya know breakfast is the most important meal of the day, also next time you should get dressed'
- ];
-  delayText(messages, 1000);
-  choices = ["Start over"];
+  addImage("DinnerTime.png");
+  story("You see Shrek CHOWING down some food<br>Hey do you know what is up with Do-<br>CRASH!!!! HEE HAWWWWWWW!!!<br>you and Shrek both go into shock.<br> you start shaking in fear. Was that Donkey? Did someone just break in?<br>What do you want to do?");
+  choices = ["Eat Shreks food","Go investagate","Cry"];
   answer = setOptions(choices);
 }
 
-function eatIgnore(){
-  addImage("greenKitchen.png");
-  var messages = [ 'You go for a quick bowl of cereal after ignoring the breeze. As you are eating, you wonder if youve done your homework, but when you stand up you can barely move.',
-  'Youre too cold.',
-  'You pass out from almost freezing to death. Wow<br>What a move, maybe the breeze should’ve given you the clue.'
+function goBack(){
+  addImage("StartingScreen.png");
+  var messages = [ 'You got scared and decided to head back to the house<br>want to explore?'
   ];
   delayText(messages, 1000);
-  choices = ["Start over"];
+  choices = ["Explore the House"];
   answer = setOptions(choices);
 }
 
@@ -111,14 +105,14 @@ function dressedSkip(){
   answer = setOptions(choices);
 }
 
-function dressedEat(){
+function eatFoodd(){
   addImage("greenKitchen.png");
-  story("You have plenty of time for breakfast! So you prepare yourself some home-made scramble eggs, buttered toast and a nice glass of your choice of juice. Your morning is going great!!<br>You finish your meal, but before heading out, you wonder if you ever did your homework…");
+  story("Shre run out to go investagate on what happened. On you way to follow him, you look back at the table and see a feast of delicous foods.<br>Your stomatch growls, as your mouth started to water.<br>Your hunger takes over as you start to DEVOUR the food.");
   choices = ["You didn't","You did"];
   answer = setOptions(choices);
 }
 
-function noHomework(){
+function findOut(){
   addImage("homeWork.png");
   var messages = [ 'You didn’t.. Oh well. You head to school anyways.', 
   'As you get there you remember that your homework was supposed to be the study guide for your up coming test!',
@@ -130,7 +124,7 @@ function noHomework(){
   answer = setOptions(choices);
 }
 
-function yesHomework(){
+function booHoo(){
   addImage("homeWork.png");
   var messages = [ 'You did..great! You head to school and you’re all ready for your test, that homework study guide did come in handy last night.',
   'You take the test, it was a stressful three hours of testing, though hours pass as you wait for your results.',
