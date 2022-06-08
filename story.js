@@ -107,32 +107,23 @@ function dressedSkip(){
 
 function eatFood(){
   addImage("Eating.gif");
-  story("Shre run out to go investagate on what happened. On you way to follow him, you look back at the table and see a feast of delicous foods.<br>Your stomatch growls, as your mouth started to water.<br>Your hunger takes over as you start to DEVOUR the food.");
+  story("Shrek run out to go investagate on what happened. On you way to follow him, you look back at the table and see a feast of delicous foods.<br>Your stomatch growls, as your mouth started to water.<br>Your hunger takes over as you start to DEVOUR the food.");
   choices = ["Start over"];
   answer = setOptions(choices);
 }
 
 function findOut(){
   addImage("homeWork.png");
-  var messages = [ 'You didn’t.. Oh well. You head to school anyways.', 
-  'As you get there you remember that your homework was supposed to be the study guide for your up coming test!',
-  "You still have to take the test ya know, and you do! Hours pass as you wait for your results, I hope it's no surprise that you.",
-  'Failed. I mean what did you expect?'
-  ];
-  delayText(messages, 1000);
-  choices = ["Start over"];
+  var messages = ("You and Shrek both decide to go investagate.<br>You turn the corner and by your surpise you see nothing but a note.<br>Where's Donkey though?<br>Maybe the letter will help.");
+    choices = ["Start over"];
   answer = setOptions(choices);
 }
 
 function booHoo(){
-  addImage("homeWork.png");
-  var messages = [ 'You did..great! You head to school and you’re all ready for your test, that homework study guide did come in handy last night.',
-  'You take the test, it was a stressful three hours of testing, though hours pass as you wait for your results.',
-  'I hope its no surprise that you.', 
-  'Passed! I mean what did you expect?'
-  ];
+  addImage("crying.gif");
+  var messages = ("You get scared to and start to cry.<br>What a BABY!!");
   delayText(messages, 1000);
-  choices = ["You won!"];
+  choices = ["Start over"];
   answer = setOptions(choices);
 }
 
