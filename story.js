@@ -105,10 +105,10 @@ function dressedSkip(){
   answer = setOptions(choices);
 }
 
-function eatFoodd(){
-  addImage("greenKitchen.png");
+function eatFood(){
+  addImage("Eating.gif");
   story("Shre run out to go investagate on what happened. On you way to follow him, you look back at the table and see a feast of delicous foods.<br>Your stomatch growls, as your mouth started to water.<br>Your hunger takes over as you start to DEVOUR the food.");
-  choices = ["You didn't","You did"];
+  choices = ["Start over"];
   answer = setOptions(choices);
 }
 
