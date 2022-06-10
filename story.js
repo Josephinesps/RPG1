@@ -39,13 +39,20 @@ function checkAnswers(answer) {
     case "Cry":
       booHoo();
       break;
-    case "You won!":
-      youWon();
+    case "Read the Letter":
+      readingLetter();
+      break;
+    case "Go for a swim":
+      swimmingWithShrek();
+      break;
+    case "Go find Donkey":
+      startingAdventure();
       break;
     }
 }
 
 function sceneTest(){
+  sceneNum = 1;
   addImage("StartingScreen.png");
   story("You wake up, in a place that looks oddly familiar. Your head is pounding, you struggle to stand up and try to understand where you are. You see ahead of you what looks like a house with surpisingly a bathroom behind it.<br>What do you do?");
   choices = ["Use the bathroom","Explore the House"];
@@ -84,7 +91,7 @@ function donkey(){
 
 function kitchen(){
   addImage("DinnerTime.png");
-  story("You see Shrek CHOWING down some food<br>Hey do you know what is up with Do-<br>CRASH!!!! HEE HAWWWWWWW!!!<br>you and Shrek both go into shock.<br> you start shaking in fear. Was that Donkey? Did someone just break in?<br>What do you want to do?");
+  story("You see Shrek CHOWING down some food<br>Hey do you know what is up with Do-<br>CRASH!!!! HEE HAWWWWWWW!!!<br>you and Shrek both go into shock.<br> you start shaking in fear.<br>Was that Donkey?<br>Did someone just break in?<br>What do you want to do?");
   choices = ["Eat Shreks food","Go investagate","Cry"];
   answer = setOptions(choices);
 }
@@ -98,10 +105,10 @@ function goBack(){
   answer = setOptions(choices);
 }
 
-function dressedSkip(){
-  addImage("busStop.png");
-  story("You believe you have no time for breakfast, so you head out early. The wind is blowing as you walk towards the bus stop. When you arrive there you stand and wait…<br>And wait…<br>And wait…<br>And wait… <br>You’ve been waiting for almost an hour now, Your stomach is screaming at you for food. It's painful. You go back home and miss school for the day, hm maybe you did have time to eat breakfast.");
-  choices = ["Start over"];
+function readingLetter(){
+  addImage("letter.png");
+  story("You pick up the note and read it outloud.<br>I have your friend. If you want your friend back, you're going have to give me your swamp.<br>...oh my god! You ask Shrek what to do.<br>As Shrek explains his plan you look outside and see a nice lake of swamp water.<br>Do you want to take a dip.");
+  choices = ["Go find Donkey","Go for a swim"];
   answer = setOptions(choices);
 }
 
@@ -113,27 +120,28 @@ function eatFood(){
 }
 
 function findOut(){
-  addImage("homeWork.png");
-  var messages = ("You and Shrek both decide to go investagate.<br>You turn the corner and by your surpise you see nothing but a note.<br>Where's Donkey though?<br>Maybe the letter will help.");
-    choices = ["Start over"];
+  addImage("letter.png");
+  story("You and Shrek both decide to go investagate.<br>You turn the corner and by your surpise you see nothing but a note.<br>Where's Donkey though?<br>Maybe the letter will help.");
+  choices = ["Read the Letter"];
   answer = setOptions(choices);
 }
 
 function booHoo(){
   addImage("crying.gif");
   var messages = ("You get scared to and start to cry.<br>What a BABY!!");
-  delayText(messages, 1000);
   choices = ["Start over"];
   answer = setOptions(choices);
 }
 
-function youWon(){
-  addImage("confetti.png");
-  var messages = [ 'You won, you got all the right combinations that resulted in the end :)',
-  'Are you missing some ending?', 
-  'If so, play again!'
-  ];
-  delayText(messages, 1000);
+function swimmingWithShrek(){
+  addImage("GoSwimming.png");
+  story("You ignore everything that Shrek said and decide to take a dip. You convice Shrek to go with you.<br>As you guys were swimming you realize how much of a nice...handsome...kindhearted guy he is.<br>You and Shrek forget about donkey and start spending more and more time togther.<br>You're in love.");
   choices = ["Start over"];
   answer = setOptions(choices);
+}
+
+function startingAdventure(){
+  addImage("OntheRoad.png");
+  story("You guys are on the road on the way to the most reasonable place to look.<br>The VILLAGE.");
+  choices = ["To be continued"];
 }
