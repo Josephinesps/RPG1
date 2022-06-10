@@ -34,7 +34,7 @@ function setOptions(options) {
 }
 
 function story(text) {
-  storytext.innerHTML = "<span>Scene:" + sceneNum + "</span><br>" + text;
+  storytext.innerHTML =  text;
 }
 
 function delayText(text, delay) {
